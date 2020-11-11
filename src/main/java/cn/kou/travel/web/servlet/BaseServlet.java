@@ -11,20 +11,20 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-
 /**
  * @author dell
  */
+
 public class BaseServlet extends HttpServlet {
 
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //System.out.println("baseServlet的service方法被执行了...");
-
         //完成方法分发
         //1.获取请求路径
-        String uri = req.getRequestURI(); //   /travel/user/add
+        //   /travel/user/add
+        String uri = req.getRequestURI();
         //System.out.println("请求uri:"+uri);//  /travel/user/add
         //2.获取方法名称
         String methodName = uri.substring(uri.lastIndexOf('/') + 1);
